@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator-box">
+      <div class="calculator-background">
+        <div class="calculator">
+          <div class="header">
+            <h2 class="header__title">Mortgage Calculator</h2>
+            <button class="header__clear-all">Clear All</button>
+          </div>
+          <form class="form" action="">
+            <div class="form__section">
+              <div class="form__input-box">
+                <label class="form__input-title" for="">Mortgage Amount</label>
+                <div class="form__label form__label--input-border">
+                  <div class="form__icon">£</div>
+                  <input class="form__input" id="mortgage-amount" type="text">
+                </div>
+                <div class="form__error-box">
+                  <p class="form__error-description">This field is required</p>
+                </div>
+              </div>
+              <div class="form__input-box">
+                <label class="form__input-title">Mortgage Term</label>
+                <div class="form__label form__label--mirror form__label--input-border">
+                  <div class="form__icon">years</div>
+                  <input class="form__input" id='mortgage-term' type="text">
+                </div>
+                <div class="form__error-box">
+                  <p class="form__error-description">This field is required</p>
+                </div>
+              </div>
+              <div class="form__input-box">
+                <label class="form__input-title" for="">Interest Rate</label>
+                <div class="form__label form__label--mirror form__label--input-border">
+                  <div class="form__icon">%</div>
+                  <input class="form__input" id='interest-rate' type="text">
+                </div>
+                <div class="form__error-box">
+                  <p class="form__error-description">This field is required</p>
+                </div>
+              </div>
+              <div class="form__input-box">
+                <label class="form__input-title" for="">Mortgage Type</label>
+                <div class="form__label form__label--radio">
+                  <div class="form__wrapper">
+                    <input class='form__input-radio' id="repayment" type="radio" name="options" value="Repayment">
+                    <label class='form__label-radio' for="repayment">Repayment</label>
+                  </div>
+                  <div class="form__wrapper">
+                    <input class='form__input-radio' id="interest-only" type="radio" name="options"
+                      value="Interest Only">
+                    <label class='form__label-radio' for="interest-only">Interest Only</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form__error-box">
+                <p class="form__error-description">This field is required</p>
+              </div>
+              <button class="form__submit" type="submit"><span><img src="assets/images/icon-calculator.svg"
+                    alt=""></span>Calculate Repayments</button>
+            </div>
+          </form>
+        </div>
+        <div class="view-box">
+          <div class="default-view">
+            <div class="default-view__img-container">
+              <img src="assets/images/illustration-empty.svg" alt="" class="default-view__img">
+            </div>
+            <h2 class="default-view__title">result shown here</h2>
+            <p class="default-view__description">Complete the form and click "calculate repayments" to see what your
+              monthly repayments would be.</p>
+          </div>
+          <div class="result-view">
+            <h2 class="result-view__title">Your result</h2>
+            <p class="result-view__description">Your result are shown below based on the information you provided. To
+              adjust the result, edit the form and click "calculate repayments" again</p>
+            <div class="result-view__details-box">
+              <div class="repay-box repay-box--monthly">
+                <p class="repay-box__info">Your monthly repayments</p>
+                <h3 class="repay-box__amount repay-box__amount--monthly"></h3>
+              </div>
+              <div class="repay-box repay-box--total">
+                <p class="repay-box__info">Total you'll repay over the term</p>
+                <h3 class="repay-box__amount repay-box__amount--over-the-term"></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+*.sketch
+*.fig
+*.xd
+*.map
+*scss
+.DS_Store
+Thumbs.db
+.prettierignore
+node_modules/
